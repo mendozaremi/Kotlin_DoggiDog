@@ -1,4 +1,5 @@
 package com.remi.doggiedog.network
+
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -27,14 +28,14 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
-// Interface store
+// Interface access data
 interface DogImageApiService {
-    // add "random" to the BASE_URL return one Dog image
+    // Add "random" to the BASE_URL return one Dog image
     @GET("random")
     suspend fun getRandomDogImage(): DogImage
 }
 
-//
+// create service / object where we can use this func inside of it
 object DogImageApi {
-    val retrofitService: DogImageApiService by lazy { retrofit.create(DogImageApiService::class.java)}
+    val retrofitService: DogImageApiService by lazy { retrofit.create(DogImageApiService::class.java) }
 }

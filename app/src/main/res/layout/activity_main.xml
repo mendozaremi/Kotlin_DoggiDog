@@ -10,13 +10,15 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEE ANOTHER DOG"
+        android:text="Woof Woof! \n SEE ANOTHER DOG"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="540dp" />
+        app:layout_constraintTop_toBottomOf="@id/DogImageHolder"  />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/DogImageHolder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/button"

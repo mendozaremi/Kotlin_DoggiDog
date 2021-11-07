@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DoggieDog</string>
+    <string name="btn">Woof Woof! \n SEE ANOTHER DOG</string>
+    <string name="imgDescription">Image of Dog</string>
 </resources>

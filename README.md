@@ -15,7 +15,7 @@ Project 1 Google Android black+ development program
 ![alt text](https://i.imgur.com/MAdnaz6.png)
 ![alt text](https://i.imgur.com/newqJza.png)
 
-<img src="https://i.imgur.com/6qQGCkf.png" width="150" height="280>
+<img src="https://i.imgur.com/6qQGCkf.png" width="150" height="280">
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

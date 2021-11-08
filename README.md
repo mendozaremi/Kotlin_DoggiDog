@@ -11,7 +11,7 @@ Project 1 Google Android black+ development program
 ![Alt Text](https://media4.giphy.com/media/Zo4HQgsIhdUL4j3MI5/giphy.gif?cid=790b761134332d2948681e9c67f559e19ddd4834a53d7089&rid=giphy.gif&ct=g)
 
 ## Images
-![alt text](https://i.imgur.com/6qQGCkf.png =250x250)
+![alt text](https://i.imgur.com/6qQGCkf.png width="150" height="280") 
 ![alt text](https://i.imgur.com/MAdnaz6.png)
 ![alt text](https://i.imgur.com/newqJza.png)
 

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">DoggieDog</string>
-    <string name="btn">Woof Woof! \n SEE ANOTHER DOG</string>
+    <string name="btn">Fetch Dog</string>
+    <string name="title">Dog Of The Day</string>
+    <string name="title2">Previous Dog</string>
     <string name="imgDescription">Image of Dog</string>
 </resources>

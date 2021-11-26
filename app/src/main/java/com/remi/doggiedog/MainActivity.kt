@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.currentlyDisplayedImage.observe( this,
             {
                 val mainImage: ImageView = findViewById(R.id.DogImageHolder)
-                //  convert uri load image source url
+
+                //  convert uri load image source url using image caching library Picasso
                 Picasso.with(this).load(it.imgSrcUrl).into(mainImage)
             })
 
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             // change button color
             changeDogButton.setBackgroundColor(color)
 
+            // null assertion operator
             // change background color
             constraintLayout!!.setBackgroundColor(color2)
         }

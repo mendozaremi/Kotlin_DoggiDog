@@ -1,13 +1,12 @@
-package com.remi.doggiedog.data
+package com.remi.doggiedog.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Dog::class], version = 1, exportSchema = false)
+@Database(entities = [DogEntity::class], version = 1)
 abstract class DogRoomDatabase : RoomDatabase() {
-
     abstract fun dogDao(): DogDao
 
     companion object {
@@ -19,16 +18,16 @@ abstract class DogRoomDatabase : RoomDatabase() {
             // if it is, then create the database
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
-                    context.applicationContext,
+                    context,
                     DogRoomDatabase::class.java,
                     "dog_database"
                 )
+                    .allowMainThreadQueries()
+                    .build()
                     // Wipes and rebuilds instead of migrating if no Migration object.
                     // Migration is not part of this codelab.
-                    .fallbackToDestructiveMigration()
-                    .build()
-                INSTANCE = instance
-                // return instance
+                  INSTANCE = instance
+
                 instance
             }
         }

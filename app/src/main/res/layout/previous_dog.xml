@@ -13,7 +13,7 @@
         android:text="@string/title2"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/DogImageHolder"
+        app:layout_constraintBottom_toTopOf="@+id/DogImageHolder2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,10 +27,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/DogImageHolder"  />
+        app:layout_constraintTop_toBottomOf="@id/DogImageHolder2"  />
 
     <ImageView
-        android:id="@+id/DogImageHolder"
+        android:id="@+id/DogImageHolder2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/button"

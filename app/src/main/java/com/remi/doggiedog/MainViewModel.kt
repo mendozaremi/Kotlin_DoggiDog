@@ -14,6 +14,7 @@ class MainViewModel : ViewModel() {
     private val _currentlyDisplayedImage = MutableLiveData<DogImage>()
     val currentlyDisplayedImage: LiveData<DogImage> = _currentlyDisplayedImage
 
+
     init {
         getNewDog()
     }

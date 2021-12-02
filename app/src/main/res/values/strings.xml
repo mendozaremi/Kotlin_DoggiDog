@@ -4,4 +4,5 @@
     <string name="title">Dog Of The Day</string>
     <string name="title2">Previous Dog</string>
     <string name="imgDescription">Image of Dog</string>
+    <string name="currDog">Current Dog...</string>
 </resources>

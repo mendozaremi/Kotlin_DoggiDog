@@ -21,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
         viewModel.getAllDogs().observe(this){
             val imageView = findViewById<ImageView>(R.id.DogImageHolder2)
             Picasso.with(this).load(it.get(0).url).into(imageView)
-            val button: Button = findViewById(R.id.previousBtn)
+            val button: Button = findViewById(R.id.button2)
             button.setOnClickListener {
                 finish()
             }

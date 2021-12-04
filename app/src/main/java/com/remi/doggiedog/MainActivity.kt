@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.remi.doggiedog.database.DogEntity
-import com.remi.doggiedog.database.DogDao
 import com.remi.doggiedog.viewmodels.MainViewModel
 import com.squareup.picasso.Picasso
 
@@ -16,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels{
         MainViewModel.MainViewModelFactory((application as DogApplication).database.dogDao())
     }
-
 
     // ColorWheel color Class
     private val colorWheel = ColorWheel()
@@ -30,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        // grab references to both buttons
         val changeDogButton: Button = findViewById(R.id.button)
         val previousDogButton: Button = findViewById(R.id.previousBtn)
 
@@ -55,9 +54,11 @@ class MainActivity : AppCompatActivity() {
             // call getNewDog Function
             viewModel.getNewDog()
 
+            // if new dogimage does not equal null call newDogImage function
             if(newDogImage != null) {
                 viewModel.addDog(newDogImage)
             }
+            // delete reference to newest added dog in database
             viewModel.deleteMostRecentDog()
 
             // change button color
@@ -68,6 +69,7 @@ class MainActivity : AppCompatActivity() {
             constraintLayout!!.setBackgroundColor(color2)
         }
 
+        // onsetclick listener for previous button pass intent mainactivity 2
         previousDogButton.setOnClickListener {
             val intent = Intent(this,MainActivity2::class.java)
             startActivity(intent)

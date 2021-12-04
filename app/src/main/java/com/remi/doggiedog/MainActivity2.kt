@@ -23,6 +23,7 @@ class MainActivity2 : AppCompatActivity() {
             Picasso.with(this).load(it.get(0).url).into(imageView)
             val button: Button = findViewById(R.id.button2)
             button.setOnClickListener {
+                // close out activity
                 finish()
             }
         }

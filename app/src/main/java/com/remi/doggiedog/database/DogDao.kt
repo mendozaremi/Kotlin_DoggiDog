@@ -15,10 +15,10 @@ interface DogDao {
     @Query("SELECT * from DogImages")
     fun getAllDogImages(): Flow<List<DogEntity>>
 
-    @Query("SELECT * FROM DogImages ORDER BY id DESC LIMIT 1")
-    fun getMostRecentlyAddDog() : DogEntity
-
     @Query("DELETE from DogImages where id=(select max(id)-1 from DogImages)")
     suspend fun deleteDog()
+
+    //    @Query("SELECT * FROM DogImages ORDER BY id DESC LIMIT 1")
+//    fun getMostRecentlyAddDog() : DogEntity
 
 }
